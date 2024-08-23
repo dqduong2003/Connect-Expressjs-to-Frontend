@@ -39,3 +39,6 @@ The server will run at `http://localhost:3001`.
   - `index.html`: Main HTML file.
   - `style.css`: CSS file for styling the interface.
   - `script.js`: JavaScript file for front-end logic.
+ 
+## Resources
+Hover Animation tutorial: https://www.youtube.com/watch?v=5DEq5cWNYt8&t=2476s
