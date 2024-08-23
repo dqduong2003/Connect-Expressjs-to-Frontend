@@ -1,3 +1,6 @@
+// Author: Daniel Dang
+// Last Modified: 23/8/2024
+
 async function getData() {
     const url = "http://localhost:5000/api/posts";
     try {
