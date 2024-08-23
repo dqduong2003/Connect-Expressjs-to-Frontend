@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    justify-content: center;
+    background: #121212;
+    color: #fff;
+    padding-top: 5rem;
+}
+
+.post {
+    font-family: "Montserrat", sans-serif;
+    border-radius: 10px;
+    padding: 8rem 0 0;
+    max-width: 400px;
+    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+    /* box-shadow: 5px 5px 10px rgba(0,0,0,0.5), -5px -5px 10px rgba(255, 255, 255, 0.055); */
+    position: relative;
+    overflow: hidden;
+
+    transition: transform 0.5s ease;
+}
+.post:hover {
+    transform: scale(1.03);
+}
+.post h1 {
+    font-size: 1.4rem;
+    
+}
+.post p {
+    font-size: 0.9rem;
+    color: #ddd;
+}
+#post-1 {
+    background-image: url("https://blog.velsoft.com/wp-content/uploads/2018/10/HTML-Basic.jpg");
+    background-size: cover;
+}
+#post-2 {
+    background-image: url("https://images.unsplash.com/photo-1456086272160-b28b0645b729?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    background-size: cover;
+}
+#post-3 {
+    background-image: url("https://images.pexels.com/photos/374016/pexels-photo-374016.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+    background-size: cover;
+}
+i {
+    font-size: 1.8rem;
+}
+.post-content {
+    padding: 1.2em 1.8em;
+    background: linear-gradient(
+        hsl(0 0% 0% / 0),
+        hsl(20 0% 0% / 0.7) 20%,
+        hsl(0 0% 0% / 1)
+    );
+    border-radius: 10px;
+    height: 100%;
+    transform: translateY(60%);
+    transition: transform 0.5s ease;
+}
+.post-title {
+    position: relative;
+    width: max-content;
+}
+.post-title::after {
+    content: "";
+    position: absolute;
+    height: 3px;
+    width: 100%;
+    background: #fff;
+    left: 0;
+    bottom: -10px;
+    transform: scaleX(0);
+
+    transform-origin: left;;
+    transition: transform 0.5s ease;
+}
+.post-content > *:not(.post-title, i) {
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+.post:hover .post-content > *:not(.post-title, i) {
+    opacity: 1;
+    transition-delay: 0.5s;
+}
+.post:hover .post-title::after {
+    transform: scaleX(1);
+}
+.post:hover .post-content {
+    transform: translateY(0);
+}
+.post-body {
+    margin-top: 1.8em;
+    text-align: justify;
+}
